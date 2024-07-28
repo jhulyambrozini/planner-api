@@ -1,0 +1,15 @@
+POST http://localhost:3333/trips
+content-type: application/json
+
+{
+    "destination": "Pais das maravilhas",
+    "starts_at": "2024-08-01 18:00:00",
+    "ends_at": "2024-08-07 18:00:00",
+    "owner_name": "ana",
+    "owner_email": "ana@ana.com",
+    "emails_to_invate": [
+        "ana@ana.com",
+        "bea@bea.com",
+        "julia@julia.com"
+    ]
+}
