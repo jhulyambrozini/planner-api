@@ -5,6 +5,7 @@ import {dayjs} from '../lib/dayjs'
 import { prisma } from "../lib/prisma";
 import { getMailClient } from "../lib/mail";
 import nodemailer from 'nodemailer'
+import { ClientError } from "../errors/client-error";
 
 export async function createInvite(app: FastifyInstance){
      app.withTypeProvider<ZodTypeProvider>().post('/trips/:tripId/invites', {
@@ -28,7 +29,7 @@ export async function createInvite(app: FastifyInstance){
         })
         
         if(!trip){
-            throw new Error('Viagem não encontrada')
+            throw new   ClientError('Viagem não encontrada')
         }
 
        
