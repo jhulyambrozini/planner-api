@@ -14,6 +14,7 @@ import { updateTrip } from "./routes/update-trip";
 import { getTripDetails } from "./routes/get-trip-details";
 import { getParticipantDetaisl } from "./routes/get-participant-details";
 import { errorHandler } from "./errors/error-handler";
+import { env } from "../env";
 
 const app = fastify()
 
@@ -41,4 +42,4 @@ app.register(getParticipantDetaisl)
 
 
 
-app.listen({port: 3333}).then(() => console.log('Server is running!'))
+app.listen({port: env.PORT}).then(() => console.log('Server is running!'))
