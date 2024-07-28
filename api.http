@@ -1,3 +1,4 @@
+### create trip
 POST http://localhost:3333/trips
 content-type: application/json
 
@@ -13,3 +14,39 @@ content-type: application/json
         "julia@julia.com"
     ]
 }
+
+### name = confirm trip
+GET http://localhost:3333/trips/835e7b49-bc4c-4d48-9458-62a3c98e9c45/confirm
+content-type: application/json
+
+### name = confirm participant
+GET http://localhost:3333/participants/25ba262f-34d1-4418-bbcf-f676ebb3d4b0/confirm
+content-type: application/json
+
+
+### name = create activities
+POST http://localhost:3333/trips/835e7b49-bc4c-4d48-9458-62a3c98e9c45/activities
+content-type: application/json
+
+{
+    "title": "atividade 4",
+    "accours_at": "2024-08-02 12:00:00"
+}
+
+### get activities
+GET http://localhost:3333/trips/835e7b49-bc4c-4d48-9458-62a3c98e9c45/activities
+content-type: application/json
+
+
+### name = create link
+POST http://localhost:3333/trips/835e7b49-bc4c-4d48-9458-62a3c98e9c45/links
+content-type: application/json
+
+{
+    "title": "reserva do hotel",
+    "url": "http://site.com/reserva"
+}
+
+### name = get link
+GET http://localhost:3333/trips/835e7b49-bc4c-4d48-9458-62a3c98e9c45/links
+content-type: application/json
